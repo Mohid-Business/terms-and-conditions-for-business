@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms and Conditions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .terms {
+            border: 1px solid #ddd;
+            padding: 20px;
+            max-height: 300px;
+            overflow-y: scroll;
+            margin-bottom: 20px;
+        }
+        .button-container {
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+    <script>
+        function getQueryParameter(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        function agreeTerms() {
+            const driveLink = getQueryParameter('link');
+            if (driveLink) {
+                window.location.href = driveLink;
+            } else {
+                alert("No Google Drive link provided.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Terms and Conditions</h1>
+    <div class="terms">
+        <pre>
+GP
+
+User Agreement for Udemy Course Facilitation Service
+
+    Service Description:
+    This service assists Pakistani users in purchasing Udemy courses using local payment methods like Easypaisa, JazzCash, and bank accounts, and provides offline access for personal educational use only.
+
+    Explicit Consent:
+    By purchasing through this service, you agree to our terms and conditions, and acknowledge understanding the legal implications of using offline copies of Udemy courses.
+
+    Non-Affiliation Disclaimer:
+    This service operates independently and is not affiliated with or endorsed by Udemy. We provide a facilitation service for the convenience of users.
+
+    Intended Use:
+    The offline content provided is intended solely for the user’s personal educational purposes. Redistribution or any other unauthorized use is strictly prohibited.
+
+    User Responsibility:
+    Users are solely responsible for any misuse of the content provided. Any redistribution, sharing, or actions that violate Udemy’s Terms of Service are the user's responsibility. Users are responsible for protecting their own data and access credentials.
+
+    Modification of Terms:
+    We reserve the right to modify these terms and conditions at any time. Continued use of the service constitutes acceptance of any changes. Users who wish to be notified of updates must explicitly request this.
+
+    Compliance with Udemy Terms:
+    Users must comply with Udemy’s Terms of Service. Violations will result in service termination and possible legal action.
+
+    Refund Policy:
+    No refunds will be issued once course content has been delivered due to the nature of digital content.
+
+    Legal Compliance:
+    This agreement is governed by the laws of Pakistan. Any disputes will be resolved according to these laws.
+
+    Contact Information:
+    For any questions or concerns, contact us at [Your Contact Information].
+
+    Indemnification:
+    Users agree to indemnify and hold harmless [Your Business Name] from any claims, losses, liabilities, damages, or expenses arising from their use of the service. We wil not be responsible or attend any court proceedings or legal troubles related to the misuse of content. 
+
+    Intellectual Property Rights:
+    All content provided remains the intellectual property of Udemy and is protected by copyright laws. Users are granted a non-transferable, non-exclusive license for personal educational use only.
+
+    Prohibited Activities:
+    Users are prohibited from:
+    a) Distributing or sharing course content;
+    b) Using content for commercial purposes;
+    c) Engaging in any activity that violates Udemy’s Terms of Service.
+
+    Accountability for Misuse:
+    Any misuse of the content provided will result in immediate service termination and may lead to legal action. We will not be responsible for any legal consequences arising from such misuse.
+
+    User Data and Privacy:
+    We are committed to protecting your privacy. Personal information collected will only be used to process orders and provide services. Refer to our Privacy Policy for more details.
+
+    Age Requirement:
+     Users under 18 must have parental consent to use the service.
+
+    Service Availability:
+    The service is available nationwide in Pakistan. Users will be notified of any maintenance or availability issues if they opt to receive such updates.
+
+By proceeding with the purchase, you agree to these terms and conditions.
+        </pre>
+    </div>
+    <div class="button-container">
+        <button onclick="agreeTerms()">I Agree</button>
+    </div>
+</body>
+</html>
