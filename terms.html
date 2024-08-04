@@ -71,6 +71,19 @@
         </div>
         <button id="agreeButton" class="agree-button">I Agree</button>
     </div>
-    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const agreeButton = document.getElementById('agreeButton');
+
+            if (agreeButton) {
+                agreeButton.addEventListener('click', function() {
+                    console.log('Agree button clicked'); // Debugging line
+                    window.location.href = 'YOUR_GOOGLE_DRIVE_LINK_HERE';
+                });
+            } else {
+                console.error('Agree button not found'); // Debugging line
+            }
+        });
+    </script>
 </body>
 </html>
