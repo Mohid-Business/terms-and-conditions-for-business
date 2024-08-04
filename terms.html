@@ -76,22 +76,21 @@
             const agreeButton = document.getElementById('agreeButton');
             const termsContainer = document.getElementById('termsContainer');
 
-            if (agreeButton) {
-                termsContainer.addEventListener('scroll', () => {
-                    if (termsContainer.scrollTop + termsContainer.clientHeight >= termsContainer.scrollHeight) {
-                        agreeButton.classList.add('enabled');
-                        agreeButton.disabled = false;
-                    }
-                });
+            termsContainer.addEventListener('scroll', () => {
+                if (termsContainer.scrollTop + termsContainer.clientHeight >= termsContainer.scrollHeight) {
+                    agreeButton.classList.add('enabled');
+                    agreeButton.disabled = false;
+                } else {
+                    agreeButton.classList.remove('enabled');
+                    agreeButton.disabled = true;
+                }
+            });
 
-                agreeButton.addEventListener('click', function() {
-                    if (agreeButton.classList.contains('enabled')) {
-                        window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
-                    }
-                });
-            } else {
-                console.error('Agree button not found');
-            }
+            agreeButton.addEventListener('click', function() {
+                if (agreeButton.classList.contains('enabled')) {
+                    window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
+                }
+            });
         });
     </script>
 </body>
