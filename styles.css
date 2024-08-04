@@ -22,6 +22,7 @@ body {
     border-radius: 20px;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
     max-width: 800px;
+    width: 90%;
     text-align: center;
     backdrop-filter: blur(12px);
     color: #333;
@@ -71,13 +72,20 @@ h1 {
     transition: background 0.4s, transform 0.3s;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
+    opacity: 0.5;
+    cursor: not-allowed;
 }
 
-.agree-button:hover {
+.agree-button.enabled {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.agree-button:hover.enabled {
     background: linear-gradient(to right, #96c93d, #00b09b);
 }
 
-.agree-button:active {
+.agree-button:active.enabled {
     transform: scale(0.95);
 }
 
@@ -92,4 +100,27 @@ h1 {
 ::-webkit-scrollbar-thumb {
     background-color: rgba(0, 0, 0, 0.2);
     border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px 30px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .terms h2 {
+        font-size: 18px;
+    }
+
+    .terms p, .terms ul {
+        font-size: 14px;
+    }
+
+    .agree-button {
+        padding: 10px 30px;
+        font-size: 16px;
+    }
 }
