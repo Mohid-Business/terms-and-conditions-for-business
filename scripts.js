@@ -1,3 +1,3 @@
 document.getElementById('agreeButton').addEventListener('click', function() {
-    window.location.href = 'googe.com';
+    window.location.href = 'google.com';
 });
