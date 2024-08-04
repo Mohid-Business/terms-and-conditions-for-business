@@ -1,56 +1,54 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #f4f4f9;
-    margin: 0;
-    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: #f3f4f6;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    margin: 0;
 }
 
 .container {
-    background: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: #ffffff;
+    padding: 20px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     max-width: 600px;
-    width: 100%;
     text-align: center;
 }
 
 h1 {
-    color: #333;
+    font-size: 24px;
+    color: #333333;
     margin-bottom: 20px;
 }
 
 .terms {
-    border: 1px solid #ddd;
-    padding: 20px;
+    text-align: left;
     max-height: 300px;
     overflow-y: auto;
-    text-align: left;
-    background: #f9f9f9;
-    border-radius: 4px;
     margin-bottom: 20px;
 }
 
-.button-container {
-    margin-top: 20px;
-}
-
 .agree-button {
-    background-color: #28a745;
+    background: #4CAF50;
     color: white;
     border: none;
     padding: 15px 30px;
     font-size: 16px;
-    border-radius: 5px;
+    border-radius: 25px;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
+    transition: background 0.3s, transform 0.3s;
 }
 
 .agree-button:hover {
-    background-color: #218838;
-    transform: scale(1.05);
+    background: #45a049;
+}
+
+.agree-button:active {
+    transform: scale(0.95);
+}
+
+.agree-button:focus {
+    outline: none;
 }
