@@ -1,48 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
 body {
-    font-family: 'Arial', sans-serif;
-    background: #f3f4f6;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
+    overflow: hidden;
 }
 
 .container {
-    background: #ffffff;
-    padding: 20px 40px;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px 50px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
     text-align: center;
+    backdrop-filter: blur(10px);
 }
 
 h1 {
-    font-size: 24px;
-    color: #333333;
-    margin-bottom: 20px;
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 25px;
+    font-weight: 700;
 }
 
 .terms {
     text-align: left;
-    max-height: 300px;
+    max-height: 400px;
     overflow-y: auto;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    padding-right: 10px;
+}
+
+.terms p, .terms ul {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.terms ul {
+    list-style: disc;
+    padding-left: 20px;
 }
 
 .agree-button {
-    background: #4CAF50;
+    background: linear-gradient(to right, #00b09b, #96c93d);
     color: white;
     border: none;
-    padding: 15px 30px;
-    font-size: 16px;
-    border-radius: 25px;
+    padding: 15px 40px;
+    font-size: 18px;
+    border-radius: 30px;
     cursor: pointer;
-    transition: background 0.3s, transform 0.3s;
+    transition: background 0.4s, transform 0.3s;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 }
 
 .agree-button:hover {
-    background: #45a049;
+    background: linear-gradient(to right, #96c93d, #00b09b);
 }
 
 .agree-button:active {
@@ -51,4 +69,13 @@ h1 {
 
 .agree-button:focus {
     outline: none;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
 }
