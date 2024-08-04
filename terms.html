@@ -1,126 +1,98 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms and Conditions</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Terms and Conditions</h1>
+        <div class="terms" id="termsContainer">
+            <h2>User Agreement for Udemy Course Facilitation Service</h2>
+            <p><strong>Service Description:</strong><br>
+            This service assists Pakistani users in purchasing Udemy courses using local payment methods like Easypaisa, JazzCash, and bank accounts, and provides offline access for personal educational use only.</p>
+            
+            <p><strong>Explicit Consent:</strong><br>
+            By purchasing through this service, you agree to our terms and conditions, and acknowledge understanding the legal implications of using offline copies of Udemy courses.</p>
+            
+            <p><strong>Non-Affiliation Disclaimer:</strong><br>
+            This service operates independently and is not affiliated with or endorsed by Udemy. We provide a facilitation service for the convenience of users.</p>
+            
+            <p><strong>Intended Use:</strong><br>
+            The offline content provided is intended solely for the user’s personal educational purposes. Redistribution or any other unauthorized use is strictly prohibited.</p>
+            
+            <p><strong>User Responsibility:</strong><br>
+            Users are solely responsible for any misuse of the content provided. Any redistribution, sharing, or actions that violate Udemy’s Terms of Service are the user's responsibility. Users are responsible for protecting their own data and access credentials.</p>
+            
+            <p><strong>Modification of Terms:</strong><br>
+            We reserve the right to modify these terms and conditions at any time. Continued use of the service constitutes acceptance of any changes. Users who wish to be notified of updates must explicitly request this.</p>
+            
+            <p><strong>Compliance with Udemy Terms:</strong><br>
+            Users must comply with Udemy’s Terms of Service. Violations will result in service termination and possible legal action.</p>
+            
+            <p><strong>Refund Policy:</strong><br>
+            No refunds will be issued once course content has been delivered due to the nature of digital content.</p>
+            
+            <p><strong>Legal Compliance:</strong><br>
+            This agreement is governed by the laws of Pakistan. Any disputes will be resolved according to these laws.</p>
+            
+            <p><strong>Contact Information:</strong><br>
+            For any questions or concerns, contact us at [Your Contact Information].</p>
+            
+            <p><strong>Indemnification:</strong><br>
+            Users agree to indemnify and hold harmless [Your Business Name] from any claims, losses, liabilities, damages, or expenses arising from their use of the service. We will not be responsible or attend any court proceedings or legal troubles related to the misuse of content.</p>
+            
+            <p><strong>Intellectual Property Rights:</strong><br>
+            All content provided remains the intellectual property of Udemy and is protected by copyright laws. Users are granted a non-transferable, non-exclusive license for personal educational use only.</p>
+            
+            <p><strong>Prohibited Activities:</strong><br>
+            Users are prohibited from:
+            <ul>
+                <li>Distributing or sharing course content;</li>
+                <li>Using content for commercial purposes;</li>
+                <li>Engaging in any activity that violates Udemy’s Terms of Service.</li>
+            </ul></p>
+            
+            <p><strong>Accountability for Misuse:</strong><br>
+            Any misuse of the content provided will result in immediate service termination and may lead to legal action. We will not be responsible for any legal consequences arising from such misuse.</p>
+            
+            <p><strong>User Data and Privacy:</strong><br>
+            We are committed to protecting your privacy. Personal information collected will only be used to process orders and provide services. Refer to our Privacy Policy for more details.</p>
+            
+            <p><strong>Age Requirement:</strong><br>
+            Users under 18 must have parental consent to use the service.</p>
+            
+            <p><strong>Service Availability:</strong><br>
+            The service is available nationwide in Pakistan. Users will be notified of any maintenance or availability issues if they opt to receive such updates.</p>
+            
+            <p>By proceeding with the purchase, you agree to these terms and conditions.</p>
+        </div>
+        <button id="agreeButton" class="agree-button" disabled>I Agree</button>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const agreeButton = document.getElementById('agreeButton');
+            const termsContainer = document.getElementById('termsContainer');
 
-body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(to right, rgba(106, 17, 203, 0.7), rgba(37, 117, 252, 0.7)), url('https://source.unsplash.com/random/1920x1080');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    overflow: hidden;
-    color: #fff;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-}
+            if (agreeButton) {
+                termsContainer.addEventListener('scroll', () => {
+                    if (termsContainer.scrollTop + termsContainer.clientHeight >= termsContainer.scrollHeight) {
+                        agreeButton.classList.add('enabled');
+                        agreeButton.disabled = false;
+                    }
+                });
 
-.container {
-    background: rgba(255, 255, 255, 0.85);
-    padding: 40px 60px;
-    border-radius: 20px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-    max-width: 800px;
-    width: 90%;
-    text-align: center;
-    backdrop-filter: blur(12px);
-    color: #333;
-    text-shadow: none;
-}
-
-h1 {
-    font-size: 32px;
-    color: #222;
-    margin-bottom: 30px;
-    font-weight: 700;
-}
-
-.terms {
-    text-align: left;
-    max-height: 400px;
-    overflow-y: auto;
-    margin-bottom: 30px;
-    padding-right: 10px;
-}
-
-.terms h2 {
-    font-size: 22px;
-    margin-bottom: 15px;
-    font-weight: 600;
-}
-
-.terms p, .terms ul {
-    font-size: 16px;
-    color: #555;
-    line-height: 1.6;
-}
-
-.terms ul {
-    list-style: disc;
-    padding-left: 20px;
-}
-
-.agree-button {
-    background: #ccc;
-    color: white;
-    border: none;
-    padding: 15px 50px;
-    font-size: 18px;
-    border-radius: 30px;
-    cursor: not-allowed;
-    transition: background 0.4s, transform 0.3s;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
-    opacity: 0.5;
-}
-
-.agree-button.enabled {
-    background: linear-gradient(to right, #00b09b, #96c93d);
-    cursor: pointer;
-    opacity: 1;
-}
-
-.agree-button.enabled:hover {
-    background: linear-gradient(to right, #96c93d, #00b09b);
-}
-
-.agree-button.enabled:active {
-    transform: scale(0.95);
-}
-
-.agree-button:focus {
-    outline: none;
-}
-
-::-webkit-scrollbar {
-    width: 8px;
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
-}
-
-@media (max-width: 768px) {
-    .container {
-        padding: 20px 30px;
-    }
-
-    h1 {
-        font-size: 24px;
-    }
-
-    .terms h2 {
-        font-size: 18px;
-    }
-
-    .terms p, .terms ul {
-        font-size: 14px;
-    }
-
-    .agree-button {
-        padding: 10px 30px;
-        font-size: 16px;
-    }
-}
+                agreeButton.addEventListener('click', function() {
+                    if (agreeButton.classList.contains('enabled')) {
+                        window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
+                    }
+                });
+            } else {
+                console.error('Agree button not found');
+            }
+        });
+    </script>
+</body>
+</html>
