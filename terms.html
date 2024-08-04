@@ -4,73 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terms and Conditions</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f4f4f4;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .container {
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            max-width: 600px;
-            width: 100%;
-            padding: 20px;
-            box-sizing: border-box;
-        }
-        .terms {
-            border: 1px solid #ddd;
-            padding: 20px;
-            max-height: 300px;
-            overflow-y: auto;
-            margin-bottom: 20px;
-            background: #f9f9f9;
-        }
-        .button-container {
-            text-align: center;
-        }
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            background-color: #007BFF;
-            color: #fff;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        button:hover {
-            background-color: #0056b3;
-        }
-    </style>
-    <script>
-        function getQueryParameter(name) {
-            const urlParams = new URLSearchParams(window.location.search);
-            return urlParams.get(name);
-        }
-
-        function agreeTerms() {
-            const driveLink = getQueryParameter('link');
-            if (driveLink) {
-                window.location.href = driveLink;
-            } else {
-                alert("No Google Drive link provided.");
-            }
-        }
-    </script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
 </head>
 <body>
     <div class="container">
         <h1>Terms and Conditions</h1>
         <div class="terms">
             <pre>
-GP
-
 User Agreement for Udemy Course Facilitation Service
 
     Service Description:
@@ -104,7 +45,7 @@ User Agreement for Udemy Course Facilitation Service
     For any questions or concerns, contact us at [Your Contact Information].
 
     Indemnification:
-    Users agree to indemnify and hold harmless [Your Business Name] from any claims, losses, liabilities, damages, or expenses arising from their use of the service. We wil not be responsible or attend any court proceedings or legal troubles related to the misuse of content. 
+    Users agree to indemnify and hold harmless [Your Business Name] from any claims, losses, liabilities, damages, or expenses arising from their use of the service. We will not be responsible or attend any court proceedings or legal troubles related to the misuse of content. 
 
     Intellectual Property Rights:
     All content provided remains the intellectual property of Udemy and is protected by copyright laws. Users are granted a non-transferable, non-exclusive license for personal educational use only.
@@ -131,9 +72,8 @@ By proceeding with the purchase, you agree to these terms and conditions.
             </pre>
         </div>
         <div class="button-container">
-            <button onclick="agreeTerms()">I Agree</button>
+            <button class="agree-button" onclick="agreeTerms()">I Agree</button>
         </div>
     </div>
 </body>
 </html>
-
