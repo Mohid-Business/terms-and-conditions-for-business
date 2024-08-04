@@ -62,30 +62,30 @@ h1 {
 }
 
 .agree-button {
-    background: linear-gradient(to right, #00b09b, #96c93d);
+    background: #ccc;
     color: white;
     border: none;
     padding: 15px 50px;
     font-size: 18px;
     border-radius: 30px;
-    cursor: pointer;
+    cursor: not-allowed;
     transition: background 0.4s, transform 0.3s;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
     opacity: 0.5;
-    cursor: not-allowed;
 }
 
 .agree-button.enabled {
-    opacity: 1;
+    background: linear-gradient(to right, #00b09b, #96c93d);
     cursor: pointer;
+    opacity: 1;
 }
 
-.agree-button:hover.enabled {
+.agree-button.enabled:hover {
     background: linear-gradient(to right, #96c93d, #00b09b);
 }
 
-.agree-button:active.enabled {
+.agree-button.enabled:active {
     transform: scale(0.95);
 }
 
